@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header,
+  footer {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    background-color: orange;
+  }
+  
+  header,
+  footer,
+  nav {
+    margin: 20px 0;
+  }
+  
+  footer {
+    font-size: 0.8rem;
+  }
+  
+  section {
+    padding: 10px;
+  }
+  
+  nav li {
+    background-color: black;
+    padding: 15px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    padding: 0;
+    background-color: white;
+  }
+  
+  .item-type-a {
+    padding-top: 45%;
+    background-color: orange;
+  }
+  
+  .item-type-b {
+    padding-top: 45%;
+    background-color: orange;
+  }
+  
+  .item-inner {
+    padding: 25px 0;
+    background-color: black;
+  }
+
+  .container-nav{
+    display: grid;
+    gap: 5px;
+    /* grid-template-columns: repeat(auto-fit,minmax(300px, auto)); */
+  }
+
+  .container-main{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .item{
+    grid-column: span 6;
+  }
+  .container-inner{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .item-inner{
+    grid-column: span 3;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .container-nav{
+        grid-auto-flow: column;
+    }
+    .item-type-b{
+        grid-column: span 3;
+    }
+    .item-inner{
+        grid-column: span 1;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .container-main{
+        grid-auto-flow: column;
+    }
+    .item{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .item-type-b {
+        grid-row: span 1;
+      }
+    .item-inner { 
+        grid-column: span 3;
+    }
+  }
+
+  @media screen and (min-width: 1450px) {
+
+    .item-inner { 
+        grid-column: span 1;
+    }
+    .item-inner:nth-child(2){
+      grid-column: span 2;
+    }
+    .item-inner:nth-child(3){
+      grid-row: span 2;
+    }
+    .item-inner:last-child{
+      grid-column: 3/-1;
+      grid-row: 3/4;
+    }
+  }

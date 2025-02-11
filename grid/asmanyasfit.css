@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+h1,
+p {
+  margin: 0 0 1em 0;
+}
+
+/* .wrapper {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  grid-auto-rows: minmax(150px, auto);
+} */
+.wrapper > *{
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+.container{
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  grid-auto-rows: minmax(150px, auto);
+}
+.container>div{
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.panel.tall{
+    grid-row: span 2;
+    background-color: #ccc;
+}
+/* No query grid responsive ရေးမယ်ဆိုရင် col span ထားတာက small screen မှာ responsive error ဖြစ်စေတယ်။ */
+/* .wide{
+    grid-column: span 2;
+} */
