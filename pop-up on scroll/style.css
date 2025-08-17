@@ -1,0 +1,139 @@
+/* CSS Reset*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #2a449b;
+    background: linear-gradient(90deg, rgba(42, 68, 155, 1) 18%, rgba(87, 199, 133, 1) 66%, rgba(237, 152, 83, 0.92) 100%);
+}
+input, button, textarea, select {
+    font: inherit;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+p{
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+header{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1180px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*CSS for Pop-up on Scroll*/
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+}
+.item{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer styling */
+footer {
+    background-color: #2d3748; /* Equivalent to bg-gray-800 */
+    color: #fff;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06); /* Shadow */
+    padding: 1.5rem 1rem;
+}
+
+.footer-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.copyright p {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    color: #a0aec0; /* Equivalent to text-gray-400 */
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    color: #a0aec0; /* Equivalent to text-gray-400 */
+    margin: 0 0.75rem; /* Spacing between icons */
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #fff;
+}
+
+.social-media svg {
+    width: 1.5rem; /* Equivalent to w-6 */
+    height: 1.5rem; /* Equivalent to h-6 */
+    fill: currentColor;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Responsive adjustments for medium screens and up */
+@media (min-width: 768px) {
+    .container {
+        width: 40%;
+    }
+    .footer-container {
+        flex-direction: row;
+    }
+    .copyright {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
